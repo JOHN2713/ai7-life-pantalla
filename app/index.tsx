@@ -15,6 +15,9 @@ export default function Home() {
         <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
           <Button title="Show Details" />
         </Link>
+        <Link href="/crear-meta-hidratacion" asChild>
+          <Button title="Crear Meta Hidratación" />
+        </Link>
       </Container>
     </View>
   );
