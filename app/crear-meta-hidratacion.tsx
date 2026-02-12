@@ -27,35 +27,6 @@ export default function CrearMetaHidratacion() {
         <ScrollView className={styles.scrollView}>
           {/* Header */}
           <View className={styles.header}>
-            {/* Status Bar */}
-            <View className={styles.statusBar}>
-              <View className={styles.timeContainer}>
-                <Text className={styles.timeText}>9:41</Text>
-              </View>
-              <View className={styles.statusBarSpacer} />
-              <Image
-                source={{
-                  uri: 'https://storage.googleapis.com/tagjs-prod.appspot.com/v1/1q9AuXz97u/k6412stb_expires_30_days.png',
-                }}
-                resizeMode="stretch"
-                className={styles.statusIcon1}
-              />
-              <Image
-                source={{
-                  uri: 'https://storage.googleapis.com/tagjs-prod.appspot.com/v1/1q9AuXz97u/9v9o6kyi_expires_30_days.png',
-                }}
-                resizeMode="stretch"
-                className={styles.statusIcon2}
-              />
-              <Image
-                source={{
-                  uri: 'https://storage.googleapis.com/tagjs-prod.appspot.com/v1/1q9AuXz97u/yeal23gy_expires_30_days.png',
-                }}
-                resizeMode="stretch"
-                className={styles.statusIcon3}
-              />
-            </View>
-
             {/* Title Header */}
             <View className={styles.titleContainer}>
               <Image
@@ -92,16 +63,18 @@ export default function CrearMetaHidratacion() {
               end={{ x: 0, y: 1 }}
               colors={['#00B8DB', '#008DA7']}
               className={styles.hydrationCard}>
-              <Image
-                source={{
-                  uri: 'https://storage.googleapis.com/tagjs-prod.appspot.com/v1/1q9AuXz97u/jspyi5ts_expires_30_days.png',
-                }}
-                resizeMode="stretch"
-                className={styles.dropletIcon}
-              />
-              <View className={styles.hydrationTextContainer}>
-                <Text className={styles.hydrationTitle}>Hidratación</Text>
-                <Text className={styles.hydrationSubtitle}>4 vasos durante 3 días</Text>
+              <View className={styles.hydrationContent}>
+                <Image
+                  source={{
+                    uri: 'https://storage.googleapis.com/tagjs-prod.appspot.com/v1/1q9AuXz97u/jspyi5ts_expires_30_days.png',
+                  }}
+                  resizeMode="stretch"
+                  className={styles.dropletIcon}
+                />
+                <View className={styles.hydrationTextContainer}>
+                  <Text className={styles.hydrationTitle}>Hidratación</Text>
+                  <Text className={styles.hydrationSubtitle}>4 vasos durante 3 días</Text>
+                </View>
               </View>
             </LinearGradient>
 
@@ -185,16 +158,8 @@ const styles = {
   scrollView: 'flex-1 bg-white',
 
   // Header styles
-  header: 'bg-[#00AC83] pb-5 mb-9',
-  statusBar: 'flex-row items-center py-[18px] px-5',
-  timeContainer: 'pb-[1px] ml-3',
-  timeText: 'text-white text-[15px] font-bold',
-  statusBarSpacer: 'flex-1',
-  statusIcon1: 'w-[17px] h-[10px] mr-[5px]',
-  statusIcon2: 'w-[15px] h-[10px] mr-[5px]',
-  statusIcon3: 'w-6 h-[11px]',
-
-  titleContainer: 'flex-row items-center mb-[26px] ml-[13px]',
+  header: 'bg-[#00AC83] pb-6 mb-9',
+  titleContainer: 'flex-row items-center py-4 px-5',
   backIcon: 'w-5 h-[15px] mr-3',
   titleText: 'text-white text-base',
 
@@ -209,11 +174,12 @@ const styles = {
   defineMetaSubtitle: 'text-[#747F9E] text-sm',
 
   // Hydration card
-  hydrationCard: 'flex-row items-center rounded-xl py-3 px-4 mb-6 mx-3',
-  dropletIcon: 'w-[55px] h-[79px] mr-5',
-  hydrationTextContainer: 'flex-1',
-  hydrationTitle: 'text-white text-base font-bold mb-2',
-  hydrationSubtitle: 'text-white text-sm',
+  hydrationCard: 'rounded-xl py-4 px-6 mb-6 mx-3',
+  hydrationContent: 'flex-col items-center justify-center',
+  dropletIcon: 'w-[55px] h-[79px] mb-3',
+  hydrationTextContainer: 'items-center',
+  hydrationTitle: 'text-white text-base font-bold mb-2 text-center',
+  hydrationSubtitle: 'text-white text-sm text-center',
 
   // Input section
   inputSection: 'mb-5 px-5',
